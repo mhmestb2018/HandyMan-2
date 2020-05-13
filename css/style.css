@@ -160,17 +160,30 @@ button:hover{
     transition: 1s all;
 }
 
-.forg_pass{
+.log_container #forg_pass{
     transform: translate(-50%, -50%);
     position: absolute;
     left: 80%;
     top: 92%;
 }
-.forg_pass:hover{
+.log_container #forg_pass:hover{
     color: red;
     cursor: pointer;
     transition: 1s all;
 }
+
+.log_container #reg{
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 27%;
+    top: 92%;
+}
+.log_container #reg:hover{
+    color: red;
+    cursor: pointer;
+    transition: 1s all;
+}
+
 /*END: CSS data for login*/
 
 input:focus{

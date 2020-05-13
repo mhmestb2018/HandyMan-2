@@ -17,15 +17,36 @@ var firebaseConfig = {
   const pass = document.getElementById("password");
   const login = document.getElementById("logd");
 
+  var docRef = firestore.collection("Users").doc(email.value);
+
+docRef.get().then(function(doc) {
+    if (doc.exists) {
+        console.log("Document data:", doc.data());
+        
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+});
+
+
   console.log(pass.value);
   login.addEventListener("click", e => {
       e.preventDefault();
-      firestore.collection("Users").doc(email.value).set({
-          id: email.value,
-          password: pass.value
-      })
-      .then(() => {console.log("Succes sent");})
-      .catch(error => {console.error(error);});
+
+      if(email.value == pass.value){
+        firestore.collection("Users").doc(email.value).set({
+            id: email.value,
+            password: pass.value
+        })
+        .then(() => {console.log("Succes sent");})
+        .catch(error => {console.error(error);});
+      }
+      else{
+          console.log("Not equal");
+      }
   })
 
 
