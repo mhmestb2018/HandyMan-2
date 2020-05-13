@@ -1,12 +1,12 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyD5NICRak4C2AaylY6vcoj1pmk6iHzAZ60",
-    authDomain: "test-d328f.firebaseapp.com",
-    databaseURL: "https://test-d328f.firebaseio.com",
-    projectId: "test-d328f",
-    storageBucket: "test-d328f.appspot.com",
-    messagingSenderId: "81074058867",
-    appId: "1:81074058867:web:f8be89a1d6ff2b1b475c06",
-    measurementId: "G-VY8YDWCT1B"
+    apiKey: "AIzaSyCL2v8R6NdJIIXraLLrpIpISbn-xUv5pCo",
+    authDomain: "handyman-1742c.firebaseapp.com",
+    databaseURL: "https://handyman-1742c.firebaseio.com",
+    projectId: "handyman-1742c",
+    storageBucket: "handyman-1742c.appspot.com",
+    messagingSenderId: "728193362142",
+    appId: "1:728193362142:web:a7b38a519c2c106ae8ba4f",
+    measurementId: "G-6DDTBN6137"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -17,37 +17,25 @@ var firebaseConfig = {
   const pass = document.getElementById("password");
   const login = document.getElementById("logd");
 
-  var docRef = firestore.collection("Users").doc(email.value);
+  const auth = firebase.auth();
 
-docRef.get().then(function(doc) {
-    if (doc.exists) {
-        console.log("Document data:", doc.data());
-        
-    } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
-    }
-}).catch(function(error) {
-    console.log("Error getting document:", error);
-});
+  //var docRef = firestore.collection("Users").doc(email.value);
 
-
-  console.log(pass.value);
   login.addEventListener("click", e => {
-      e.preventDefault();
+    e.preventDefault();
 
-      if(email.value == pass.value){
-        firestore.collection("Users").doc(email.value).set({
-            id: email.value,
-            password: pass.value
-        })
-        .then(() => {console.log("Succes sent");})
-        .catch(error => {console.error(error);});
-      }
-      else{
-          console.log("Not equal");
-      }
-  })
+    const promise = auth.signInWithEmailAndPassword(email.value, pass.value)
+    .then(() => {
+        console.log("Logged in successfully");
+
+        //Redirect code here
+    })
+    .catch(error => {
+        console.error(error);
+        window.alert(error.message);
+    });
+  
+})
 
 
   
