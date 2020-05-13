@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In/Sign In</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
 </head>
 <body>
     <header>
@@ -29,10 +32,10 @@
             <h2>Login Here</h2>
             <input id="email" type="text" name="mail" placeholder="Enter your mail">
             <input id="password" type="password" name="password" placeholder="Enter your password">
-            <button>Log In</button>
+            <button id="logd">Log In</button>
             <h6><a href="#" class="forg_pass">Forgot Your Password</a></h6>
         </div>
     </div>
-    
+    <script src='JS/firebase_login.js'></script>
 </body>
 </html>
