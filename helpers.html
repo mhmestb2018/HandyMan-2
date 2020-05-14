@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In/Sign In</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/helper.css">
     <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
@@ -26,19 +26,12 @@
             </ul>
         </div>
     </header>
-    <div class="wrapper">
-        <!-- <div class="first">
-            <img src="" alt="">
-        </div> -->
-        <div class="log_container">
-            <h2>Login Here</h2>
-            <input id="email" type="text" name="mail" placeholder="Enter your mail">
-            <input id="password" type="password" name="password" placeholder="Enter your password">
-            <button id="logd">Log In</button>
-            <h6><a id="reg" href="registration.html">Not having an account? Register Here</a></h6>
-            <h6><a id="forg_pass" href="#">Forgot Your Password</a></h6>
-        </div>
+    <div class="search-box">
+        <input type="text" name="" class="search-txt" placeholder="Type to search.."/>
+        <a class="search-btn">
+            <i class="far fa-search"></i>
+        </a>
     </div>
-    <script src='JS/firebase_login.js'></script>
+
 </body>
 </html>
