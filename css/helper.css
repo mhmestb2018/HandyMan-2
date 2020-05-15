@@ -1,8 +1,8 @@
 /* CSS data for searchbar*/
 .search-box {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 20%;
+    left: 20%;
     transform: translate(-50%, -50%);
     background: #2f3640;
     height: 40px;
@@ -10,17 +10,12 @@
     padding: 10px;
    }
    
-   .search-box:hover > .search-txt {
-    width: 240px;
-    padding: 0 6px;
-   }
-   
-   .search-box:hover > .search-btn {
+.search-box:hover > .search-btn {
     background: white;
     color: black;
    }
    
-   .search-btn {
+.search-btn {
     color: #e84118;
     float: right;
     width: 40px;
@@ -35,11 +30,11 @@
     cursor: pointer;
    }
    
-   .search-btn > i {
+.search-btn > i {
     font-size: 30px;
    }
    
-   .search-txt {
+.search-txt {
     border: none;
     background: none;
     outline: none;
@@ -49,9 +44,10 @@
     font-size: 16px;
     transition: 0.4s;
     line-height: 40px;
-    width: 0px;
     font-weight: bold;
-   }
+    width: 240px;
+    padding: 0 6px;
+    }
 
 
 /*END: CSS data for searchbar*/
