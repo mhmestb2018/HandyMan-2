@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin-contact</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/contactus.css">
 
 <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
@@ -16,7 +14,7 @@
     <header class="header">
         <div class="main">
             <div class="logo">
-                <img src="logo.png" alt="logo">
+                <img src="logo1.png" alt="logo">
             </div>
             <ul>
                 <li class="active"><a href="index.html">Home</a></li>
@@ -27,28 +25,25 @@
             </ul>
         </div>
     </header>
-
 <div class="contact">
     <h1 style="font-size:70px;color:black;font-family:Andalus ">
     We'd love to hear from you
     </h1><br><br>
-    <p >Whether you have a question about features, trails, pricing, 
-
-need a demo, or anything else, our team is ready to answer all your 
-
-questions </p>
-   
+    <p >Whether you have a question about features, trails, pricing, need a demo, or anything else, our team is ready to answer all your questions </p>   
+  </div>
+<div class="form-message">
+<form id="form-message" method="post" onsubmit="leave()">
+<input type="text" class="message-form" id="name" placeholder="Your Name" required><br><br>
+<input type="text" class="message-form" id="mail" placeholder="Email" required><br><br>
+<textarea type="text" class="message-form" id="message" placeholder="Enter Your Message" row="4" required></textarea><br>
+<br>
+<input type="submit" id="submit" class="btns" value="Leave" >
+</form>
 </div>
-<div class="message-form">
-    <form id="messages-form" method="post" action="">
-        <input name="name" id="name" type="text" class="form-messages" placeholder="Your Name" required><br>
-        <input name="email" id="mail" type="text" class="form-messages" placeholder="Email" required><br>
-        <textarea row name="meessage" type="text" id="message" class="form-messages" placeholder="Message" row="4" required></textarea>
-        <br>
-        <br>
-        <input type="submit" value="LEAVE" class="btns" id="btns" onclick="leave()">
-    </form>
-</div>
+
+
+
+
 
 <script src='JS/firebase_contactus.js'></script>
 </body>
