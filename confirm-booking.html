@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Booking</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" href="css/confirm-booking.css">
+</head>
+<body>
+<div class="big">
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img src="logo.png" alt="logo">
+            </div>
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="#">Helpers</a></li>
+                <li><a href="#">My Bookings</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+<div style="margin-left:34%;font-size:54px;">
+    <h1 style="font-size:94px">Book now</h1>
+</div>
+<div  class="conta">
+    <p id="service-head"style="padding-left:30px;font-size:24px;height:40px;" class="type">
+        Service Head
+    </p>
+    <p id="description" style="padding-left:30px;font-size:24px;height:40px;" class="none">
+        Description
+    </p>
+    <p id="cost" style="padding-left:30px;font-size:24px;height:40px;" class="123">
+        Cost
+    </p>
+<div class="datte">
+    <form>
+        <div class="input-field" style="margin:4% 20%;background:blue;padding:10px;">
+            <input type="text" id="time" class="datepicker" placeholder="                                                Choose Date">
+        </div>
+        </div>
+        <div class="time">
+        <div class="input-field" style="margin:4% 20%;background:blue;padding:10px;">
+            <input type="text" id="time" class="timepicker" placeholder="                                                 Choose Time">
+        </div>
+        </div>
+        <div class="input-field" style="margin:4% 20%;background:blue;padding:10px;height:64px">
+            <input type="submit" id="submit-booking" value="Confirm Booking" class="submit-booking" style="background:blue;border:none;font-size:24px;padding:12px;padding-left:32%;">
+        </div>
+    </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            const dater=document.querySelector('.datepicker');
+            M.Datepicker.init(dater,{});
+        </script>
+        <script>
+            const timer=document.querySelector('.timepicker');
+            M.Timepicker.init(timer,{});
+        </script>
+
+    </body>
+</html> 

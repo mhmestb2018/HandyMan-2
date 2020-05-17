@@ -4,6 +4,12 @@
     font-family: Century Gothic;
 }
 
+
+.d3{
+  display: block;
+  text-align: center;
+}
+
 title h1{
     color: cornsilk;
     font-size: 80px;
@@ -22,14 +28,6 @@ title h1{
     transform: translate(-50%, -50%);
 }
 
-.line2{
-    color: cornsilk;
-    position: absolute;
-    top: 56%;
-    left: 50%;
-    width: 40%;
-    transform: translate(-50%, -50%);
-}
 
 .button{
     position: absolute;
@@ -52,45 +50,43 @@ title h1{
 }
 
 
+/* for i-pads     */
 
-
-  @media screen and (max-width:768px) {
-    header nav{
-      float: none;
-      clear: left;
-      width:100%;
-
-    }
-    header nav ul{
-      margin: 0;
-      padding-left: 0;
-
-    }
-
-    .logo img{
-        float:none;
-        margin-left: 50%;
-
-    }
-    header nav ul li{
-      margin: 10px 0;
-      width:18%;
-      padding: 0;
-      text-align: center;
-    }
- .hea1
-{
-margin-bottom: 70px;
-}
-.line1{
-  margin-top: 50px;
-}
-.button
-{
-  margin-top: 100px;
-}
-
+@media screen and (max-width:768px) {
+  header nav{
+    float: none;
+    clear: left;
+    width:100%;
   }
+  header nav ul{
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .logo img{
+      float:none;
+      margin-left: 50%;
+  }
+
+  header nav ul li{
+    margin: 10px 0;
+    width:18%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .hea1{
+    margin-bottom: 70px;
+  }
+  .line1{
+    margin-top: 50px;
+  }
+  .button{
+    margin-top: 100px;
+  }
+}
+
+  /* this seems to be breaking point    */
 
 
     @media screen and (max-width:600px) {
@@ -136,7 +132,7 @@ margin-bottom: 70px;
 
     }
 
-
+/* for mobile devices     */
 
     @media screen and (max-width:480px) {
       header nav{
