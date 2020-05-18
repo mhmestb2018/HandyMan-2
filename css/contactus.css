@@ -70,7 +70,7 @@ padding-bottom:20px;
 
 /* CSS data for header*/
 
-.clas{
+body{
     background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../background-img.jpg);
     height: 100vh;
     display:block;
