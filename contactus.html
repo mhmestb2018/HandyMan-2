@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin-contact</title>
-    <link rel="stylesheet" href="css/contactus.css">
-
-<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+    <title>contact</title>
+	<link rel="stylesheet" href="css/contactus.css">
+	<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+	
 </head>
 <body class="clas">
     <header class="header">
@@ -25,26 +25,21 @@
             </ul>
         </div>
     </header>
-<div class="contact">
-    <h1 style="font-size:70px;color:black;font-family:Andalus ">
-    We'd love to hear from you
-    </h1><br><br>
-    <p >Whether you have a question about features, trails, pricing, need a demo, or anything else, our team is ready to answer all your questions </p>   
-  </div>
-<div class="form-message">
-<form id="form-message" method="post" onsubmit="leave()">
-<input type="text" class="message-form" id="name" placeholder="Your Name" required><br><br>
-<input type="text" class="message-form" id="mail" placeholder="Email" required><br><br>
-<textarea type="text" class="message-form" id="message" placeholder="Enter Your Message" row="4" required></textarea><br>
-<br>
-<input type="submit" id="submit" class="btns" value="Leave" >
-</form>
-</div>
-
-
-
-
-
-<script src='JS/firebase_contactus.js'></script>
+	<div class="contact">
+		<h1 style="font-size:70px;color:black;font-family:Andalus ">
+		We'd love to hear from you
+		</h1><br><br>
+		<p >Whether you have a question about features, trails, pricing, need a demo, or anything else, our team is ready to answer all your questions </p>   
+	</div>
+	<div class="form-message">
+		<form id="form-message">
+			<input type="text" class="message-form" name="name" placeholder="Your Name" required><br><br>
+			<input type="email" class="message-form" name="mail" placeholder="Email" required><br><br>
+			<textarea type="text" class="message-form" name="message" placeholder="Enter Your Message" row="4" required></textarea><br>
+			<br>
+			<input type="submit" id="sub_btn" value="Leave" >
+		</form>
+	</div>
+	<script src='JS/firebase_contactus.js'></script>
 </body>
 </html>
