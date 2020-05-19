@@ -60,11 +60,12 @@ var firebaseConfig = {
   service_description.innerHTML += subservice;
 
 
-  let user = auth.currentUser;
+ 
   const button = document.getElementById("confirm_btn");
 
   button.addEventListener("click", e => {
         e.preventDefault();
+        let user = auth.currentUser;
         const date = document.getElementById("date");
         const time = document.getElementById("time");
 
@@ -77,7 +78,7 @@ var firebaseConfig = {
 
             const uid = firestore.collection(" ").doc().id;
 
-        firestore.collection("Users").doc("mail@mail.com").collection("Bookings").doc(uid).set({
+        firestore.collection("Users").doc(user.email).collection("Bookings").doc(uid).set({
             date: date.value,
             time: time.value,
             price: cost,
@@ -89,7 +90,10 @@ var firebaseConfig = {
         .then(() => {
             console.log("Booking Confirmed");
             window.alert("Booking Confirmed");
-            window.location="mybookings.html";
+            let site = `
+            mybookings.html?mail=${user.email}
+            `
+            window.location=site;
             })
         .catch(error => {
             console.error(error);

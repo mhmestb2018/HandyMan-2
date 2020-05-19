@@ -42,7 +42,7 @@ var firebaseConfig = {
                 const subservice_list = document.getElementById("list_of_subservice");
 
                 const type_name = `
-                    <li><a href = "confbooking.html?city=${city},service=${service},subservice=${subservice.id}">${subservice.id}</a></li>
+                    <li><a href = "confirm-booking.html?city=${city},service=${service},subservice=${subservice.id}">${subservice.id}</a></li>
                      `        
                 subservice_list.innerHTML += type_name;
                 console.log(type_name);

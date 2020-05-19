@@ -47,6 +47,7 @@ var firebaseConfig = {
             const promise = auth.createUserWithEmailAndPassword(email.value, pass.value)
             .then(() => {
             console.log("User Created!");
+            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
             var user = firebase.auth().currentUser;
             var email = user.email;
             firestore.collection("Users").doc(email).set({
@@ -59,13 +60,7 @@ var firebaseConfig = {
             })
             .then(() => {
                 console.log("Success sent");
-                firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-                .then(function() {
-                    return firebase.auth().signInWithEmailAndPassword(email, password);
-                })
-                .catch(function(error) {
-                    console.error(error);
-                });
+                firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
                 window.location="services.html";
             })
             .catch(error => {
