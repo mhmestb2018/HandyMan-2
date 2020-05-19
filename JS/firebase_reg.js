@@ -57,7 +57,17 @@ var firebaseConfig = {
                 address: address.value,
                 pincode: Number(pin.value)
             })
-            .then(() => {console.log("Success sent");})
+            .then(() => {
+                console.log("Success sent");
+                firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+                .then(function() {
+                    return firebase.auth().signInWithEmailAndPassword(email, password);
+                })
+                .catch(function(error) {
+                    console.error(error);
+                });
+                window.location="services.html";
+            })
             .catch(error => {
                 console.error(error);
                 window.alert(error.message);

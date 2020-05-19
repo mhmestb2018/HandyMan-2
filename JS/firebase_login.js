@@ -27,8 +27,15 @@ var firebaseConfig = {
     const promise = auth.signInWithEmailAndPassword(email.value, pass.value)
     .then(() => {
         console.log("Logged in successfully");
-
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+                .then(function() {
+                    return firebase.auth().signInWithEmailAndPassword(email, password);
+                })
+                .catch(function(error) {
+                    console.error(error);
+                });
         //Redirect code here
+        window.location="services.html";
     })
     .catch(error => {
         console.error(error);

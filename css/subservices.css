@@ -50,29 +50,6 @@ header{
     margin: auto;
 }
 
-.city-box{
-    margin-left:30px;
-    padding:30px;
-    margin-top:30px;
-    height:40px;
-    padding:6px;
-}
-.city-box select{
-    border-color:transparent;
-    border-radius:10px;
-    padding-left:10px;
-    border-radius:10px;
-    padding-top:4px;
-    padding-bottom:4px;
-    margin:4px;
-    font-size:19px;
-    width:19%;
-    height:40px;
-    background:#50ffd9;
-    -webkit-appearance:button;
-    outline:none
-}
-
 .search-box {
     /* position: absolute;
     top: 290px;

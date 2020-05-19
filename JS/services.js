@@ -55,7 +55,7 @@ citiesCollection.get()
                 const service_list = document.getElementById(ul_name);
 
                 const type_name = `
-                    <li><a href = "subservices.html/?service=${types.id}">${types.id}</a></li>
+                    <li><a href = "subservices.html?city=${city.id},service=${types.id}">${types.id}</a></li>
                      `        
                 service_list.innerHTML += type_name;
                 console.log(type_name);
