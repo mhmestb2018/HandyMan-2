@@ -12,7 +12,7 @@
 2) [Our Solution](#sol)
 3) [Future Scope](#future)
 4) [Tech-Stack Used](#depend)
-5) [Team](#contri)
+5) [Contributor](#contri)
 
 
 <a name="prob"></a>
@@ -61,12 +61,9 @@ helpers.
 * Google Firebase – Cloud Firestore (for database and management) 
 
 <a name="contri"></a>
-## Team
+## Contributor
 
-* [Priyanshu Gupta](github.com/wsLord)
-* Harsh Gyanchandani
-* Ishan Khan
-* Ayush Yadav
+* [Priyanshu Gupta](linkedin.com/in/priyanshusmvs)
 
 #### Hosted on:
 https://wslord.github.io/HandyMan/
